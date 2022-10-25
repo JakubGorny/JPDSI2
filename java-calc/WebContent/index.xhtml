@@ -18,14 +18,27 @@
 				<p:outputLabel for="" value="Kwota:" />	
 		  		<p:inputText value="#{calcBB.x}"
 		  		 required="true" requiredMessage="Brak kwoty"
+		  		  converterMessage="Wartość musi być liczbą"
+		  		  validatorMessage="Wartość musi być większa od 1"
 		  		 id="kw" />
+		  		 <f:validateDoubleRange minimum="1.01"/>
 		  		 <h:message for="kw"/>
 				<br />
-				<p:outputLabel for="" value="Liczba miesięcy" required="true" requiredMessage="Brak miesięcy"	 id="lm" />
+				<p:outputLabel for="" value="Liczba miesięcy"
+				 required="true" requiredMessage="Brak miesięcy"
+				 converterMessage="Wartość musi być liczbą"
+				 validatorMessage="Wartość musi być większa od 1"
+				 id="lm" />
+				 <f:validateDoubleRange minimum="1.01"/>
 		  		 <h:message for="lm"/>
 		  		<p:inputText value="#{calcBB.y}" />
 				<br />
-				<p:outputLabel for="" value="Oprocentowanie:" required="true" requiredMessage="Brak oprocentowania"	 id="op" />
+				<p:outputLabel for="" value="Oprocentowanie:"
+				 required="true" requiredMessage="Brak oprocentowania"
+				  converterMessage="Wartość musi być liczbą"
+				  validatorMessage="Wartość musi być większa od 1"
+				 id="op" />
+				 <f:validateDoubleRange minimum="1.01"/>
 		  		 <h:message for="op"/>
 				<p:inputText value="#{calcBB.z}" />
 				<p:messages id="msg" />
