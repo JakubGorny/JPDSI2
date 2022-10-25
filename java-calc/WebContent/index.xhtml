@@ -9,19 +9,24 @@
 	<title>Kalkulatior kredytowy</title>
 </h:head>
 <h:body>
-.
+
 
 <p:panel header="Kalkulator kredytowy">
 	<div>
 		<h:form id="bla">
 			<h:panelGrid id="grid" columns="3" cellpadding="5">
 				<p:outputLabel for="" value="Kwota:" />	
-		  		<p:inputText value="#{calcBB.x}" />
+		  		<p:inputText value="#{calcBB.x}"
+		  		 required="true" requiredMessage="Brak kwoty"
+		  		 id="kw" />
+		  		 <h:message for="kw"/>
 				<br />
-				<p:outputLabel for="" value="Liczba miesięcy" />
+				<p:outputLabel for="" value="Liczba miesięcy" required="true" requiredMessage="Brak miesięcy"	 id="lm" />
+		  		 <h:message for="lm"/>
 		  		<p:inputText value="#{calcBB.y}" />
 				<br />
-				<p:outputLabel for="" value="Oprocentowanie:" />
+				<p:outputLabel for="" value="Oprocentowanie:" required="true" requiredMessage="Brak oprocentowania"	 id="op" />
+		  		 <h:message for="op"/>
 				<p:inputText value="#{calcBB.z}" />
 				<p:messages id="msg" />
 		
